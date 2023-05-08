@@ -1,0 +1,8 @@
+spring:
+    application:
+        name: "ansalemo-springboot"
+    config:
+        import: "optional:configserver:http://localhost:8888"
+
+cloud:
+    name: "ansalemo-springboot (local)"
