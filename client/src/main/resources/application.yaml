@@ -1,8 +1,10 @@
-spring:
-    application:
-        name: "ansalemo-springboot"
-    config:
-        import: "optional:configserver:http://localhost:8888"
+# Uncomment to run locally
+# Comment this out to run on Azure Spring Apps
+# spring:
+#     application:
+#         name: "ansalemo-springboot"
+#     config:
+#         import: "optional:configserver:http://localhost:8888"
 
 cloud:
     name: "ansalemo-springboot (local)"
