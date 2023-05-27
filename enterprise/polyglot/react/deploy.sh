@@ -1,0 +1,2 @@
+az spring app deploy --resource-group "ansalemo-rg" --service "ansalemo-asa-enterprise" --name "ansalemo-asa-e-react-1" --source-path "./" --build-env BP_WEB_SERVER=nginx BP_WEB_SERVER_ROOT=build
+az spring app deploy --resource-group "ansalemo-rg" --service "ansalemo-asa-enterprise" --name "ansalemo-asa-e-react-1" --source-path "./" --build-env BP_WEB_SERVER=nginx BP_WEB_SERVER_ROOT="build" BP_NODE_RUN_SCRIPTS=build BP_WEB_SERVER_ENABLE_PUSH_STATE="true" --builder=webserver --verbose
