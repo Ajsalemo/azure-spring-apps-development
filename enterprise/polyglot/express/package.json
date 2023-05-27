@@ -1,0 +1,17 @@
+{
+  "name": "azure-webapps-linux-node-spafe-nodebe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "cd ./frontend && npm i && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "react-router-dom": "^6.11.2"
+  }
+}
