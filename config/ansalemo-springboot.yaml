@@ -1,3 +1,20 @@
 cloud:
     name: "ansalemo-springboot (5)"
 
+spring:
+    jmx:
+        enabled: true
+    cloud:
+         config:
+          auto-refresh: true
+          refresh-interval: 60
+        
+management:
+    endpoints:
+        jmx:
+            exposure:
+                include: '*'
+        web:
+            exposure:
+                include: '*'
+
