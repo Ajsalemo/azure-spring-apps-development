@@ -22,7 +22,6 @@ management:
         jmx:
             exposure:
                 include: '*'
-
         web:
             exposure:
                 include: '*'
