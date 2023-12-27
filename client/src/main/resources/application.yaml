@@ -24,4 +24,5 @@ management:
                 include: '*'
         web:
             exposure:
-                include: '*'
+                include: 
+                - refresh

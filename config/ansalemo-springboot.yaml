@@ -1,5 +1,5 @@
 cloud:
-    name: "ansalemo-springboot (6)"
+    name: "ansalemo-springboot (7)"
 
 spring:
     jmx:
@@ -16,5 +16,6 @@ management:
                 include: '*'
         web:
             exposure:
-                include: '*'
+                include: 
+                - refresh
 
