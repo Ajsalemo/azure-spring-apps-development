@@ -13,7 +13,7 @@ public class ConfigClientController {
 
     @GetMapping("/api/config/client")
     public String configClient() {
-        return "Azure Spring App Name: " + cloudName + "(Green)";
+        return "Azure Spring App Name: " + cloudName;
     }
 }
 
