@@ -10,15 +10,17 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
+import org.springframework.stereotype.Component;
 
 @ConditionalOnBean({RefreshEndpoint.class})
 @Configuration
 @AutoConfigureAfter({RefreshAutoConfiguration.class, RefreshEndpointAutoConfiguration.class})
 @EnableScheduling
+@Component
 public class RefreshConfig implements SchedulingConfigurer {
     @Value("${spring.cloud.config.refresh-interval:60}")
     private long refreshInterval;
-    @Value("${spring.cloud.config.auto-refresh:false}")
+    @Value("${spring.cloud.config.auto-refresh:true}")
     private boolean autoRefresh;
     private RefreshEndpoint refreshEndpoint;
     public RefreshConfig(RefreshEndpoint refreshEndpoint) {
