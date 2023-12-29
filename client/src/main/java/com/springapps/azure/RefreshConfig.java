@@ -28,10 +28,8 @@ public class RefreshConfig implements SchedulingConfigurer {
     }
     @Override
     public void configureTasks(ScheduledTaskRegistrar scheduledTaskRegistrar) {
-        if (autoRefresh) {
-            // set minimal refresh interval to 5 seconds
-            refreshInterval = Math.max(refreshInterval, 5);
-            scheduledTaskRegistrar.addFixedRateTask(() -> refreshEndpoint.refresh(), refreshInterval * 1000);
-        }
+        // set minimal refresh interval to 5 seconds
+        refreshInterval = Math.max(refreshInterval, 5);
+        scheduledTaskRegistrar.addFixedRateTask(() -> refreshEndpoint.refresh(), refreshInterval * 1000);
     }
 }
