@@ -8,3 +8,9 @@
 
 cloud:
     name: "ansalemo-springboot (local)"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
