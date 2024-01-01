@@ -8,15 +8,3 @@
 
 cloud:
     name: "ansalemo-springboot (local)"
-
-spring:
-    cloud:
-         config:
-          auto-refresh: true
-          refresh-interval: 60
-management:
-    endpoints:
-         web:
-          exposure:
-            include:
-              - refresh
