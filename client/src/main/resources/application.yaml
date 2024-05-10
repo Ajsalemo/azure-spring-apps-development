@@ -2,7 +2,7 @@
 # Comment this out to run on Azure Spring Apps
 # spring:
 #     application:
-#         name: "ansalemo-springboot"
+#         name: "ansalemo-eureka-client"
 #     config:
 #         import: "optional:configserver:http://localhost:8888"
 
@@ -13,4 +13,17 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: '*'
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
+
