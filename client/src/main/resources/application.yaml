@@ -1,8 +1,8 @@
 # Uncomment to run locally
 # Comment this out to run on Azure Spring Apps
-# spring:
-#     application:
-#         name: "ansalemo-eureka-client"
+spring:
+    application:
+        name: "ansalemo-eureka-client"
 #     config:
 #         import: "optional:configserver:http://localhost:8888"
 
@@ -25,5 +25,9 @@ logging:
     org:
       springframework:
         web: DEBUG
+
+eureka:
+  client:
+    registryFetchIntervalSeconds: 2000
 
 
