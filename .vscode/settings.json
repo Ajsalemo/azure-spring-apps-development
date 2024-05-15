@@ -1,3 +1,5 @@
 {
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "appService.defaultWebAppToDeploy": "/subscriptions/3c8ffff1-bc39-4306-830b-214aae68b00b/resourceGroups/ansalemo-rg/providers/Microsoft.Web/sites/ansalemo-java-se-awdawd",
+    "appService.deploySubpath": "client\\target\\azure-0.0.1-SNAPSHOT.jar"
 }
