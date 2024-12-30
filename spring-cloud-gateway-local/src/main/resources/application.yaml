@@ -2,7 +2,7 @@ server:
   port: 9999
 spring:
   application:
-    name: aca  
+    name: spring-cloud-gateway  
   cloud:
     gateway:
       routes:
