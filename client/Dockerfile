@@ -13,3 +13,4 @@ COPY --from=build /usr/src/app/init_container.sh init_container.sh
 EXPOSE 8080
 
 ENTRYPOINT [ "/usr/src/app/init_container.sh" ]
+

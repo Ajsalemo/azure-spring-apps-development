@@ -1,0 +1,22 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: aca  
+  cloud:
+    gateway:
+      routes:
+      - id: google
+        uri: https://google.com
+        predicates:
+        - Path=/redirect/google
+        filters:
+        - SetPath=/
+      - id: local
+        uri: http://localhost:8080
+        # Match anything after /v2/ on localhost:9999
+        predicates:
+        - Path=/v2/**
+        # Rewrite localhost:9999/v2/** to localhost:8080/**
+        filters:
+        - RewritePath=/v2/(?<segment>.*),/$\{segment}
