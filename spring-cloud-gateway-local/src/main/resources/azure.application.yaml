@@ -1,0 +1,19 @@
+springCloudGatewayRoutes:
+  - id: bing
+    uri: https://bing.com
+    predicates:
+      - Path=/redirect/bing
+  - id: google
+    uri: https://google.com
+    predicates:
+      - Path=/redirect/google
+    filters:
+      - SetPath=/
+  - id: containerapps
+    uri: https://someapp.funnnyname-1234abc.eastus.azurecontainerapps.io
+    # Match anything after /v2/ on https://someapp.funnyname-1234abc.someregion.azurecontainerapps.io
+    predicates:
+      - Path=/v2/**
+    # Rewrite [component]-azure-java.funnyname-1234abc.someregion.azurecontainerapps.io/v2/** to https://someapp.funnyname-1234abc.someregion.azurecontainerapps.io/**
+    filters:
+      - RewritePath=/v2/(?<segment>.*),/$\{segment}

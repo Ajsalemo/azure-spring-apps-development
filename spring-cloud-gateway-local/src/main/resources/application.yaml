@@ -20,3 +20,12 @@ spring:
         # Rewrite localhost:9999/v2/** to localhost:8080/**
         filters:
         - RewritePath=/v2/(?<segment>.*),/$\{segment}
+      - id: containerapps
+        uri: https://someapp.funnnyname-1234abc.eastus.azurecontainerapps.io
+        # Match anything after /v2/ on https://someapp.funnyname-1234abc.someregion.azurecontainerapps.io
+        predicates:
+        - Path=/v2/**
+        # Rewrite [component]-azure-java.funnyname-1234abc.someregion.azurecontainerapps.io/v2/** to https://someapp.funnyname-1234abc.someregion.azurecontainerapps.io/**
+        filters:
+        - RewritePath=/v2/(?<segment>.*),/$\{segment}
+
